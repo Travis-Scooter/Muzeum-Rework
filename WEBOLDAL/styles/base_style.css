@@ -1,0 +1,182 @@
+/* -----------------------------------------------------------
+   1. VARIABLES & BASE STYLES
+   ----------------------------------------------------------- */
+:root {
+    --bg-primary: #161616;
+    --bg-surface: #222222;
+    --bg-elevated: #2b2b2b;
+    --accent-gold: #c8a96b;
+    --accent-bronze: #8c6a3c;
+    --text-main: #f8f5f0;
+    --text-muted: #b8b1a7;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    padding-top: 80px;
+    /* Space for the fixed nav */
+}
+
+/* -----------------------------------------------------------
+   2. NAVIGATION
+   ----------------------------------------------------------- */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(32, 32, 32, 0.95);
+    backdrop-filter: blur(10px);
+    /* Modern frosted-glass effect */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    /* Subtle gold border */
+    z-index: 1000;
+}
+
+nav h1 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition-smooth);
+}
+
+nav a:hover {
+    color: var(--accent-gold);
+}
+
+/* -----------------------------------------------------------
+   3. LAYOUT & CONTENT CONTAINERS
+   ----------------------------------------------------------- */
+#content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* CSS Grid layout for managing exhibits/collections */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* -----------------------------------------------------------
+   4. ARTICLES & CARDS (Exhibits)
+   ----------------------------------------------------------- */
+article {
+    background-color: var(--bg-surface);
+    border-radius: 12px;
+    overflow: hidden;
+    /* Ensures images don't break border radius */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-smooth);
+}
+
+article:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Styled for an optional image inside the article */
+article img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    filter: grayscale(20%);
+    transition: var(--transition-smooth);
+}
+
+article:hover img {
+    filter: grayscale(0%);
+}
+
+.article-body {
+    padding: 25px;
+}
+
+article h2 {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+article p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+/* -----------------------------------------------------------
+   5. INTERACTIVE ELEMENTS
+   ----------------------------------------------------------- */
+button,
+.btn {
+    display: inline-block;
+    background: transparent;
+    color: var(--accent-gold);
+    border: 1px solid var(--accent-gold);
+    padding: 10px 20px;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    text-decoration: none;
+}
+
+button:hover,
+.btn:hover {
+    background-color: var(--accent-gold);
+    color: var(--bg-primary);
+}
+
+/* -----------------------------------------------------------
+   6. FOOTER
+   ----------------------------------------------------------- */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}

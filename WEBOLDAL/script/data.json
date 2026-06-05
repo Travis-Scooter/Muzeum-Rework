@@ -1,6 +1,10 @@
-{
-    "0": {
+[
+    {
         "title": "bla",
         "description": "bla"
+    },
+    {
+        "title": "bla2",
+        "description": "bla2"
     }
-}
+]

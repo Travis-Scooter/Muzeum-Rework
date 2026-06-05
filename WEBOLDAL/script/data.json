@@ -1,10 +1,30 @@
 [
     {
-        "title": "bla",
-        "description": "bla"
+        "id": "0",
+        "title": "Tükrös galvanométer, német gyártmány",
+        "description": "Dr. B. Lange cég, 1930-as évek",
+        "popup_title": "excuse me sir",
+        "popup_description": "testing testing one two three"
     },
     {
-        "title": "bla2",
-        "description": "bla2"
+        "id": "1",
+        "title": "Többfunkciós elektromos mérőműszer",
+        "description": "német gyártmány, 1930-as évek",
+        "popup_title": "god of larp",
+        "popup_description": "i have no tip and i must cream"
+    },
+    {
+        "id": "2",
+        "title": "Működőképes stabil gőzgépmodell",
+        "description": "vizsgamunka, 1957-1958",
+        "popup_title": "excuse me sir",
+        "popup_description": "testing testing one two three"
+    },
+    {
+        "id": "3",
+        "title": "Precíziós laboratóriumi kétkarú mérleg",
+        "description": "Gyártó: Zier Károly Budapest, 1930-as évek",
+        "popup_title": "god of larp",
+        "popup_description": "i have no tip and i must cream"
     }
 ]
